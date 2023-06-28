@@ -1,47 +1,47 @@
 # ERC721 smart contract 
-Description :
+## Description :
  This Contract is used to create the NFT Tokens. This smart contract is inherited from the ERC721 
 contract, which is imported from openzeppelin. There are two function CreateNFT and TransferNFT. 
 
-CreateNFT(): 
+## CreateNFT(): 
   This function is used to create NFT. It will take the 2 arguments one is address of the NFT owner and 
 other one is URI of the NFT. It executes and creates NFT using ERC721 mint function then returns the 
 tokenId of the NFT.
 
-TransferNFT() : 
+## TransferNFT() : 
    This function is used to transfer NFT between two accounts. It will take 3 arguments, those are from 
 address, to address and tokeId of NFT.ERC721 _transfer function is used to transfer the tokens between two 
 accounts. 
 
 # ERC20 smart contract 
-Description: 
+## Description: 
   This contract is used to create ERC20 tokens. This smart contract is inherited from the ERC20 
 contract, which is imported from openzeppelin. There are two function MintToken and TransferERC20Token. 
 
-MintToken(): 
-This function is used to Mint ERC20 tokens. It will take two arguments one is owner’s address and 
+## MintToken(): 
+  This function is used to Mint ERC20 tokens. It will take two arguments one is owner’s address and 
 other is amount token to be mint. 
 
-TransferERC20Token(): 
-This function is used to Transfer ERC20 tokens between the accounts. It will take 3 arguments, those 
+## TransferERC20Token(): 
+  This function is used to Transfer ERC20 tokens between the accounts. It will take 3 arguments, those 
 are from address, to address and amount tokens. _transfer function of ERC20 is used to transfer the tokens 
 between two accounts.
 
 # Mapping ERC720 and ERC20 token 
-Description: 
- This smart contract is used to establish a mapping between ERC721 tokens and ERC20 tokens, 
+## Description: 
+  This smart contract is used to establish a mapping between ERC721 tokens and ERC20 tokens, 
 where each ERC721 token is associated with 1000 ERC20 tokens. It will two arguments at the time 
 deployment, one is address of the ERC721 contract and other one is address of the ERC20 contract. By 
 using address of the ERC721 and ERC20, it access the functions in both smart contracts. There are two 
 functions MapToken and TransferLinkedTokens. 
 
-MapToken(): 
+## MapToken(): 
   This function is used to map the tokens between ERC721 and ERC20.It will take the one argument 
 i.e tokenId of NFT. There is a mapping data structure called NftToToken, which stores key as tokenId and 
 associated value as 1000 ERC20 tokens .It initially mints the 1000 tokens using ERC20 function with user’s 
 address and then map those 1000 tokens to Owner’s NFT. 
 
-TransferLinkedTokens(): 
+## TransferLinkedTokens(): 
   This function is used to Transfer the mapped tokens between the accounts. It will takes two 
 arguments, one is to address and other one is tokenId. It changes the ownership of NFT token from owner to 
 recipient using ERC721’s function and transfers the ERC20 tokens by using ERC20’s function. 
